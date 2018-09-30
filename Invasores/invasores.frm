@@ -565,8 +565,8 @@ Private Sub timer2_timer()
         pega = Alien(x).Left
             If Line2.X1 >= Alien(x).Left And Line2.X2 <= Alien(x).Left + 480 Then
                 If Line2.Y1 >= Alien(x).Top And Line2.Y2 <= Alien(x).Top + 680 Then
-                    If Alien(x).Visible = True Then
-                        'Line2.Visible = False    Após matar o primeiro "dab" a bala continua o curso
+                    If Alien(x).Visible = True And Line2.Visible = True Then
+                        'Line2.Visible = False    Após matar o primeiro "dab" a bala não continua o curso
                         rc = sndPlaySound("C:\vb6-master\Invasores\midia\Sounds\bhit_flesh-1.wav", SND_ASYNC)
                         Alien(x).Visible = False ' Tira o "dab" que morreu
                         alienDead(x).Visible = True ' Mostra no controle o "dab" morto
