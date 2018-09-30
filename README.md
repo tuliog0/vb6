@@ -1,2 +1,2 @@
-# vb6-calc
+# vb6
 extract to c:
