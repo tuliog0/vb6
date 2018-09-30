@@ -161,28 +161,34 @@ Private Sub form_keydown(KeyCode As Integer, Shift As Integer)
     Dim rc As Integer
     If KeyCode = vbKeyF2 Then
         IniciaJogo
-    ElseIf KeyCode = vbKeyF3 Then
-        Timer1.Enabled = False
-        Timer1.Enabled = False
-        MsgBox "Pausa", vbExclamation, "Jogo"
-        Timer1.Enabled = True
-        Timer1.Enabled = True
-    ElseIf KeyCode = vbKeySpace And Line2.Visible = False Then
-        rc = sndPlaySound("C:\vb6\Invasores\midia\Sounds\deagle-1.wav", SND_ASYNC)
-        Line2.Visible = True
-        Line2.X1 = Image1.Left + 230
-        Line2.X2 = Image1.Left + 230
-        Line2.Y1 = Image1.Top - 360
-        Line2.Y2 = Image1.Top
-        Timer2.Enabled = True
-    ElseIf KeyCode = vbKeyRight Then
-        If Image1.Left < 4200 Then
-            Image1.Left = Image1.Left + 200
-        End If
-    ElseIf KeyCode = vbKeyLeft Then
-        If Image1.Left > 0 Then
-            Image1.Left = Image1.Left - 200
-        End If
+        
+        ElseIf KeyCode = vbKeyF3 Then ' F3 pausa o jogo
+            Timer1.Enabled = False
+            Timer1.Enabled = False
+            MsgBox "Pausa", vbExclamation, "Jogo"
+            Timer1.Enabled = True
+            Timer1.Enabled = True
+            
+        ElseIf KeyCode = vbKeySpace And Line2.Visible = False Then ' Espaço atira
+            rc = sndPlaySound("C:\vb6\Invasores\midia\Sounds\deagle-1.wav", SND_ASYNC) ' aciona som de tiro
+            Line2.Visible = True
+            Line2.X1 = Image1.Left + 230
+            Line2.X2 = Image1.Left + 230
+            Line2.Y1 = Image1.Top - 360
+            Line2.Y2 = Image1.Top
+            Timer2.Enabled = True
+            
+        ElseIf KeyCode = vbKeyRight Then ' Movimentação da arma para direita
+        
+            If Image1.Left < 4200 Then
+                Image1.Left = Image1.Left + 200
+            End If
+            
+        ElseIf KeyCode = vbKeyLeft Then ' Movimentação da arma para esquerda
+        
+            If Image1.Left > 0 Then
+                Image1.Left = Image1.Left - 200
+            End If
     End If
 
 End Sub
@@ -190,7 +196,7 @@ End Sub
 
 Private Sub form_load()
 
-    IniciaJogo
+    IniciaJogo ' Chama função Iniciar jogo
     
 End Sub
 
@@ -198,11 +204,14 @@ End Sub
 Private Sub IniciaJogo()
         
     If MsgBox("Deseja um jogo mais Dificil?" & vbCrLf & "Yes - Dificil" & vbCrLf & "No - Fácil", vbYesNo, "Selecione o estilo.") = vbNo Then
+    ' Caso o jogador selecionar não na mensagem iniciara os "dab" com mais espaço.
         Line2.Visible = False
-        For i = 0 To 5
+        
+        For i = 0 To 5 ' load 6 pictures
             Alien(i).Visible = True
             Alien(i).Picture = LoadPicture("C:\vb6\Invasores\midia\img\dab.jpg")
         Next i
+        
         Image1.Picture = LoadPicture("C:\vb6\Invasores\midia\img\image2.jpg")
         Timer1.Enabled = True
         Timer2.Enabled = True
@@ -219,28 +228,31 @@ Private Sub IniciaJogo()
         Alien(4).Top = -2600
         Alien(5).Left = 525
         Alien(5).Top = -3400
-    Else
-        Line2.Visible = False
-        For i = 0 To 5
-            Alien(i).Visible = True
-            Alien(i).Picture = LoadPicture("C:\vb6\Invasores\midia\img\dab.jpg")
-        Next i
-        Image1.Picture = LoadPicture("C:\vb6\Invasores\midia\img\image2.jpg")
-        Timer1.Enabled = True
-        Timer2.Enabled = True
-        matou = 0
-        Alien(0).Left = 4199
-        Alien(0).Top = 0
-        Alien(1).Left = 3675
-        Alien(1).Top = -50
-        Alien(2).Left = 3150
-        Alien(2).Top = -100
-        Alien(3).Left = 2100
-        Alien(3).Top = -150
-        Alien(4).Left = 1050
-        Alien(4).Top = -200
-        Alien(5).Left = 525
-        Alien(5).Top = -250
+        
+        Else ' Caso o jogador selecionar 'SIM' na mensagem ou qualquer outra coisa... o jogo iniciara com os "dab" mais proximos dificultando o jogo.
+            Line2.Visible = False
+            
+            For i = 0 To 5 ' load 6 pictures
+                Alien(i).Visible = True
+                Alien(i).Picture = LoadPicture("C:\vb6\Invasores\midia\img\dab.jpg")
+            Next i
+            
+            Image1.Picture = LoadPicture("C:\vb6\Invasores\midia\img\image2.jpg")
+            Timer1.Enabled = True
+            Timer2.Enabled = True
+            matou = 0
+            Alien(0).Left = 4199
+            Alien(0).Top = 0
+            Alien(1).Left = 3675
+            Alien(1).Top = -50
+            Alien(2).Left = 3150
+            Alien(2).Top = -100
+            Alien(3).Left = 2100
+            Alien(3).Top = -150
+            Alien(4).Left = 1050
+            Alien(4).Top = -200
+            Alien(5).Left = 525
+            Alien(5).Top = -250
     End If
         
 End Sub
@@ -250,46 +262,52 @@ Private Sub Timer1_Timer()
 
     For i = 0 To 5
     
-        posicao = Int(Rnd * 100)
-        posicaoFimLeft = Int(Rnd * 4199)
+        posicao = Int(Rnd * 100) ' Randomizando posição para o "dab" (dentro do campo)
+        posicaoFimLeft = Int(Rnd * 4199) ' Randomizando posição para o "dab" quando acaba o campo
 
-        If Alien(i).Top < 6360 Then
+        If Alien(i).Top < 6360 Then 'limite de campo abaixo
             Alien(i).Top = Alien(i).Top + 100
             If lugar = False Then
-                If Alien(i).Left < 4200 Then
+                If Alien(i).Left < 4200 Then 'limite de campo a direita
                     Alien(i).Left = Alien(i).Left + posicao
                     lugar = True
                 Else
-                    Alien(i).Left = Alien(i).Left - posicaoFimLeft
+                    Alien(i).Left = Alien(i).Left - posicaoFimLeft ' recolocando o "dab" quando acaba o campo
                     lugar = True
                 End If
             Else
-                If Alien(i).Left > 120 Then
+                If Alien(i).Left > 120 Then 'limite de campo a esquerda
                     Alien(i).Left = Alien(i).Left - posicao
                     lugar = False
                 Else
-                    Alien(i).Left = Alien(i).Left + posicaoFimLeft
+                    Alien(i).Left = Alien(i).Left + posicaoFimLeft ' recolocando o "dab" quando acaba o campo
                     lugar = False
                 End If
             End If
+        ' Caso queira retornar o "dab" ao inicio depois de tocar a extremidade de baixo (descomentar abaixo)
         'Else
             'Alien(i).Top = -30
+            
         End If
+        
         If Alien(i).Visible = True Then
+            ' Caso queira retornar o "dab" ao inicio depois de tocar a extremidade de baixo (descomentar abaixo)
             'If Alien(i).Left >= Image1.Left And Alien(i).Left <= Image1.Left + 480 Then
                 'If Alien(i).Top + 480 >= 6000 And Alien(i).Top + 480 <= 6400 Then
-            If Alien(i).Top >= 6400 Then
-                rc = sndPlaySound("C:\vb6\Invasores\midia\Sounds\gg_brass_bell.wav", SND_ASYNC)
-                Image1.Picture = Image2.Picture
-                Timer1.Enabled = False
-                Timer2.Enabled = False
-                If MsgBox("Você perdeu...", vbOK, "Jogo") = vbOK Or vbCancel Then
-                    IniciaJogo
-                Else
-                    Exit Sub
-                End If
-            End If
-            'End If
+            ' Caso queira retornar o "dab" ao inicio depois de tocar a extremidade de baixo (comentar somente o proximo if)
+                    If Alien(i).Top >= 6400 Then
+                        rc = sndPlaySound("C:\vb6\Invasores\midia\Sounds\gg_brass_bell.wav", SND_ASYNC)
+                        Image1.Picture = Image2.Picture
+                        Timer1.Enabled = False
+                        Timer2.Enabled = False
+                            If MsgBox("Você perdeu...", vbOK, "Jogo") = vbOK Or vbCancel Then
+                                IniciaJogo
+                            Else
+                                Exit Sub
+                            End If
+                    End If
+                'End If ' Caso queira retornar o "dab" ao inicio depois de tocar a extremidade de baixo (descomentar esse ENDIF)
+            'End If ' Caso queira retornar o "dab" ao inicio depois de tocar a extremidade de baixo (descomentar esse ENDIF)
         End If
     Next i
 
@@ -301,27 +319,31 @@ Private Sub timer2_timer()
     Line2.Y1 = Line2.Y1 - 250
     Line2.Y2 = Line2.Y2 - 250
     conta = conta + 1
+    
     If Line2.Y1 < 0 Then
         Line2.Visible = False
         Timer2.Enabled = False
     End If
-    For x = 0 To 5
+    
+    For x = 0 To 5 ' Verificação de acertos da bala vs "dab"
         pega = Alien(x).Left
             If Line2.X1 >= Alien(x).Left And Line2.X2 <= Alien(x).Left + 480 Then
                 If Line2.Y1 >= Alien(x).Top And Line2.Y2 <= Alien(x).Top + 680 Then
                     If Alien(x).Visible = True Then
-                        'Line2.Visible = False    Após matar o primeiro "dab" a bala continuo o curso
-                        matou = matou + 1
+                        'Line2.Visible = False    Após matar o primeiro "dab" a bala continua o curso
+                        Alien(x).Visible = False
+                        matou = matou + 1 ' Contagem de acertos
                     End If
-                    Alien(x).Visible = False
+                   ' voltar
                 End If
             End If
     Next x
-    If matou = 6 Then
+    
+    If matou = 6 Then ' Após matar os seis "dab" o jogador ganha e fim de jogo
         If MsgBox("Você ganhou!!!", vbOK, "Jogo") = vbOK Or vbCancel Then
             Timer1.Enabled = False
             Timer2.Enabled = False
-            IniciaJogo
+            IniciaJogo 'FIM DE JOGO (reinicia o jogo)
         Else
             Timer1.Enabled = False
             Timer2.Enabled = False
