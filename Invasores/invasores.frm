@@ -2,16 +2,16 @@ VERSION 5.00
 Begin VB.Form Form1 
    BorderStyle     =   3  'Fixed Dialog
    Caption         =   """Invasores"" - F2 Inicia - F3 Pausa"
-   ClientHeight    =   7335
+   ClientHeight    =   7305
    ClientLeft      =   45
    ClientTop       =   390
-   ClientWidth     =   4815
+   ClientWidth     =   6240
    KeyPreview      =   -1  'True
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
-   ScaleHeight     =   7335
-   ScaleWidth      =   4815
+   ScaleHeight     =   7305
+   ScaleWidth      =   6240
    StartUpPosition =   2  'CenterScreen
    Begin VB.Timer Timer2 
       Interval        =   30
@@ -23,17 +23,237 @@ Begin VB.Form Form1
       Left            =   2040
       Top             =   3600
    End
+   Begin VB.Label Label1 
+      Alignment       =   2  'Center
+      BackColor       =   &H80000008&
+      Caption         =   "1"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   18
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H8000000B&
+      Height          =   495
+      Index           =   5
+      Left            =   4800
+      TabIndex        =   7
+      Top             =   6240
+      Width           =   615
+   End
+   Begin VB.Label Label1 
+      Alignment       =   2  'Center
+      BackColor       =   &H80000008&
+      Caption         =   "1"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   18
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H8000000B&
+      Height          =   495
+      Index           =   4
+      Left            =   4920
+      TabIndex        =   6
+      Top             =   5280
+      Width           =   495
+   End
+   Begin VB.Label Label1 
+      Alignment       =   2  'Center
+      BackColor       =   &H80000008&
+      Caption         =   "1"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   18
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H8000000B&
+      Height          =   375
+      Index           =   3
+      Left            =   4920
+      TabIndex        =   5
+      Top             =   4320
+      Width           =   495
+   End
+   Begin VB.Label Label1 
+      Alignment       =   2  'Center
+      BackColor       =   &H80000008&
+      Caption         =   "1"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   18
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H8000000B&
+      Height          =   495
+      Index           =   2
+      Left            =   4920
+      TabIndex        =   4
+      Top             =   3360
+      Width           =   495
+   End
+   Begin VB.Label Label1 
+      Alignment       =   2  'Center
+      BackColor       =   &H80000008&
+      Caption         =   "1"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   18
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H8000000B&
+      Height          =   495
+      Index           =   1
+      Left            =   4920
+      TabIndex        =   3
+      Top             =   2400
+      Width           =   495
+   End
+   Begin VB.Label Label1 
+      Alignment       =   2  'Center
+      BackColor       =   &H80000008&
+      Caption         =   "1"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   18
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H8000000B&
+      Height          =   495
+      Index           =   0
+      Left            =   4920
+      TabIndex        =   2
+      Top             =   1440
+      Width           =   495
+   End
+   Begin VB.Image alienDead 
+      Height          =   600
+      Index           =   5
+      Left            =   5520
+      Picture         =   "invasores.frx":0000
+      Stretch         =   -1  'True
+      Top             =   6120
+      Width           =   600
+   End
+   Begin VB.Image alienDead 
+      Height          =   600
+      Index           =   4
+      Left            =   5520
+      Picture         =   "invasores.frx":841E
+      Stretch         =   -1  'True
+      Top             =   5160
+      Width           =   600
+   End
+   Begin VB.Image alienDead 
+      Height          =   600
+      Index           =   3
+      Left            =   5520
+      Picture         =   "invasores.frx":1083C
+      Stretch         =   -1  'True
+      Top             =   4200
+      Width           =   600
+   End
+   Begin VB.Image alienDead 
+      Height          =   600
+      Index           =   2
+      Left            =   5520
+      Picture         =   "invasores.frx":18C5A
+      Stretch         =   -1  'True
+      Top             =   3240
+      Width           =   600
+   End
+   Begin VB.Image alienDead 
+      Height          =   600
+      Index           =   1
+      Left            =   5520
+      Picture         =   "invasores.frx":21078
+      Stretch         =   -1  'True
+      Top             =   2280
+      Width           =   600
+   End
+   Begin VB.Image alienDead 
+      Height          =   600
+      Index           =   0
+      Left            =   5520
+      Picture         =   "invasores.frx":29496
+      Stretch         =   -1  'True
+      Top             =   1320
+      Width           =   600
+   End
+   Begin VB.Label lblScore 
+      Alignment       =   2  'Center
+      BackColor       =   &H80000008&
+      Caption         =   "0"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   24
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H8000000F&
+      Height          =   495
+      Left            =   4800
+      TabIndex        =   1
+      Top             =   480
+      Width           =   1335
+   End
+   Begin VB.Label lblShowScore 
+      Alignment       =   2  'Center
+      BackColor       =   &H80000008&
+      Caption         =   "Score:"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   12
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H8000000B&
+      Height          =   255
+      Left            =   4800
+      TabIndex        =   0
+      Top             =   120
+      Width           =   1335
+   End
    Begin VB.Line Line3 
       BorderColor     =   &H80000004&
       X1              =   4680
       X2              =   4680
       Y1              =   0
-      Y2              =   6960
+      Y2              =   7320
    End
    Begin VB.Line Line1 
       BorderColor     =   &H80000003&
       X1              =   0
-      X2              =   4800
+      X2              =   6240
       Y1              =   6960
       Y2              =   6960
    End
@@ -43,12 +263,12 @@ Begin VB.Form Form1
       Height          =   6975
       Left            =   4680
       Top             =   0
-      Width           =   135
+      Width           =   1575
    End
    Begin VB.Image Image1 
       Height          =   375
       Left            =   2280
-      Picture         =   "invasores.frx":0000
+      Picture         =   "invasores.frx":318B4
       Stretch         =   -1  'True
       Top             =   6960
       Width           =   480
@@ -59,13 +279,13 @@ Begin VB.Form Form1
       Height          =   375
       Left            =   0
       Top             =   6960
-      Width           =   4815
+      Width           =   6255
    End
    Begin VB.Image Alien 
       Height          =   525
       Index           =   5
       Left            =   3720
-      Picture         =   "invasores.frx":0C8B
+      Picture         =   "invasores.frx":3253F
       Stretch         =   -1  'True
       Top             =   2040
       Width           =   405
@@ -80,7 +300,7 @@ Begin VB.Form Form1
    Begin VB.Image Image2 
       Height          =   315
       Left            =   3840
-      Picture         =   "invasores.frx":90A9
+      Picture         =   "invasores.frx":3A95D
       Stretch         =   -1  'True
       Top             =   6480
       Visible         =   0   'False
@@ -90,7 +310,7 @@ Begin VB.Form Form1
       Height          =   530
       Index           =   4
       Left            =   3000
-      Picture         =   "invasores.frx":A9C2
+      Picture         =   "invasores.frx":3C276
       Stretch         =   -1  'True
       Top             =   960
       Width           =   410
@@ -99,7 +319,7 @@ Begin VB.Form Form1
       Height          =   530
       Index           =   3
       Left            =   2400
-      Picture         =   "invasores.frx":12DE0
+      Picture         =   "invasores.frx":44694
       Stretch         =   -1  'True
       Top             =   240
       Width           =   410
@@ -108,7 +328,7 @@ Begin VB.Form Form1
       Height          =   530
       Index           =   2
       Left            =   1680
-      Picture         =   "invasores.frx":1B1FE
+      Picture         =   "invasores.frx":4CAB2
       Stretch         =   -1  'True
       Top             =   240
       Width           =   410
@@ -117,7 +337,7 @@ Begin VB.Form Form1
       Height          =   530
       Index           =   1
       Left            =   600
-      Picture         =   "invasores.frx":2361C
+      Picture         =   "invasores.frx":54ED0
       Stretch         =   -1  'True
       Top             =   1080
       Width           =   410
@@ -126,7 +346,7 @@ Begin VB.Form Form1
       Height          =   530
       Index           =   0
       Left            =   120
-      Picture         =   "invasores.frx":2BA3A
+      Picture         =   "invasores.frx":5D2EE
       Stretch         =   -1  'True
       Top             =   2040
       Width           =   410
@@ -206,10 +426,17 @@ Private Sub IniciaJogo()
     If MsgBox("Deseja um jogo mais Dificil?" & vbCrLf & "Yes - Dificil" & vbCrLf & "No - Fácil", vbYesNo, "Selecione o estilo.") = vbNo Then
     ' Caso o jogador selecionar não na mensagem iniciara os "dab" com mais espaço.
         Line2.Visible = False
+        lblScore.Caption = 0
         
-        For i = 0 To 5 ' load 6 pictures
+        For i = 0 To 5 ' load 6 pictures dab
             Alien(i).Visible = True
             Alien(i).Picture = LoadPicture("C:\vb6-master\Invasores\midia\img\dab.jpg")
+        Next i
+        
+        For i = 0 To 5 ' load 6 pictures dead
+            Label1(i).Visible = False
+            alienDead(i).Visible = False
+            alienDead(i).Picture = LoadPicture("C:\vb6-master\Invasores\midia\img\emoji.jpg")
         Next i
         
         Image1.Picture = LoadPicture("C:\vb6-master\Invasores\midia\img\image2.jpg")
@@ -228,13 +455,21 @@ Private Sub IniciaJogo()
         Alien(4).Top = -2600
         Alien(5).Left = 525
         Alien(5).Top = -3400
+        rc = sndPlaySound("C:\vb6-master\Invasores\midia\Sounds\hos2.wav", SND_ASYNC)
         
         Else ' Caso o jogador selecionar 'SIM' na mensagem ou qualquer outra coisa... o jogo iniciara com os "dab" mais proximos dificultando o jogo.
             Line2.Visible = False
+            lblScore.Caption = 0
             
-            For i = 0 To 5 ' load 6 pictures
+            For i = 0 To 5 ' load 6 pictures dab
+                Label1(i).Visible = False
                 Alien(i).Visible = True
                 Alien(i).Picture = LoadPicture("C:\vb6-master\Invasores\midia\img\dab.jpg")
+            Next i
+            
+            For i = 0 To 5 ' load 6 pictures dead
+            alienDead(i).Visible = False ' Torna os deads invisíveis
+            alienDead(i).Picture = LoadPicture("C:\vb6-master\Invasores\midia\img\emoji.jpg")
             Next i
             
             Image1.Picture = LoadPicture("C:\vb6-master\Invasores\midia\img\image2.jpg")
@@ -253,6 +488,7 @@ Private Sub IniciaJogo()
             Alien(4).Top = -200
             Alien(5).Left = 525
             Alien(5).Top = -250
+            rc = sndPlaySound("C:\vb6-master\Invasores\midia\Sounds\hos3.wav", SND_ASYNC)
     End If
         
 End Sub
@@ -300,7 +536,7 @@ Private Sub Timer1_Timer()
                         Image1.Picture = Image2.Picture
                         Timer1.Enabled = False
                         Timer2.Enabled = False
-                            If MsgBox("Você perdeu...", vbOK, "Jogo") = vbOK Or vbCancel Then
+                            If MsgBox("Você perdeu...", vbOK, "Que pena.") = vbOK Or vbCancel Then
                                 IniciaJogo
                             Else
                                 Exit Sub
@@ -331,8 +567,13 @@ Private Sub timer2_timer()
                 If Line2.Y1 >= Alien(x).Top And Line2.Y2 <= Alien(x).Top + 680 Then
                     If Alien(x).Visible = True Then
                         'Line2.Visible = False    Após matar o primeiro "dab" a bala continua o curso
-                        Alien(x).Visible = False
+                        rc = sndPlaySound("C:\vb6-master\Invasores\midia\Sounds\bhit_flesh-1.wav", SND_ASYNC)
+                        Alien(x).Visible = False ' Tira o "dab" que morreu
+                        alienDead(x).Visible = True ' Mostra no controle o "dab" morto
                         matou = matou + 1 ' Contagem de acertos
+                        Label1(x).Caption = x + 1 ' coloca no caption o numero do "dab" morto
+                        Label1(x).Visible = True ' Mostra no controle o numero do "dab" morto
+                        lblScore.Caption = matou
                     End If
                    ' voltar
                 End If
@@ -340,7 +581,9 @@ Private Sub timer2_timer()
     Next x
     
     If matou = 6 Then ' Após matar os seis "dab" o jogador ganha e fim de jogo
-        If MsgBox("Você ganhou!!!", vbOK, "Jogo") = vbOK Or vbCancel Then
+    rc = sndPlaySound("C:\vb6-master\Invasores\midia\Sounds\gg_brass_bell.wav", SND_ASYNC)
+    
+        If MsgBox("Você ganhou!!!", vbOK, "Parabéns!") = vbOK Or vbCancel Then
             Timer1.Enabled = False
             Timer2.Enabled = False
             IniciaJogo 'FIM DE JOGO (reinicia o jogo)
