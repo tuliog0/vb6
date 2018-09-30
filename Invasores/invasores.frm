@@ -168,7 +168,7 @@ Private Sub form_keydown(KeyCode As Integer, Shift As Integer)
         Timer1.Enabled = True
         Timer1.Enabled = True
     ElseIf KeyCode = vbKeySpace And Line2.Visible = False Then
-        rc = sndPlaySound("C:\vb6-calc-master\Invasores\midia\Sounds\deagle-1.wav", SND_ASYNC)
+        rc = sndPlaySound("C:\vb6\Invasores\midia\Sounds\deagle-1.wav", SND_ASYNC)
         Line2.Visible = True
         Line2.X1 = Image1.Left + 230
         Line2.X2 = Image1.Left + 230
@@ -201,9 +201,9 @@ Private Sub IniciaJogo()
         Line2.Visible = False
         For i = 0 To 5
             Alien(i).Visible = True
-            Alien(i).Picture = LoadPicture("C:\vb6-calc-master\Invasores\midia\img\dab.jpg")
+            Alien(i).Picture = LoadPicture("C:\vb6\Invasores\midia\img\dab.jpg")
         Next i
-        Image1.Picture = LoadPicture("C:\vb6-calc-master\Invasores\midia\img\image2.jpg")
+        Image1.Picture = LoadPicture("C:\vb6\Invasores\midia\img\image2.jpg")
         Timer1.Enabled = True
         Timer2.Enabled = True
         matou = 0
@@ -223,9 +223,9 @@ Private Sub IniciaJogo()
         Line2.Visible = False
         For i = 0 To 5
             Alien(i).Visible = True
-            Alien(i).Picture = LoadPicture("C:\vb6-calc-master\Invasores\midia\img\dab.jpg")
+            Alien(i).Picture = LoadPicture("C:\vb6\Invasores\midia\img\dab.jpg")
         Next i
-        Image1.Picture = LoadPicture("C:\vb6-calc-master\Invasores\midia\img\image2.jpg")
+        Image1.Picture = LoadPicture("C:\vb6\Invasores\midia\img\image2.jpg")
         Timer1.Enabled = True
         Timer2.Enabled = True
         matou = 0
@@ -279,7 +279,7 @@ Private Sub Timer1_Timer()
             'If Alien(i).Left >= Image1.Left And Alien(i).Left <= Image1.Left + 480 Then
                 'If Alien(i).Top + 480 >= 6000 And Alien(i).Top + 480 <= 6400 Then
             If Alien(i).Top >= 6400 Then
-                rc = sndPlaySound("C:\vb6-calc-master\Invasores\midia\Sounds\gg_brass_bell.wav", SND_ASYNC)
+                rc = sndPlaySound("C:\vb6\Invasores\midia\Sounds\gg_brass_bell.wav", SND_ASYNC)
                 Image1.Picture = Image2.Picture
                 Timer1.Enabled = False
                 Timer2.Enabled = False
@@ -310,7 +310,7 @@ Private Sub timer2_timer()
             If Line2.X1 >= Alien(x).Left And Line2.X2 <= Alien(x).Left + 480 Then
                 If Line2.Y1 >= Alien(x).Top And Line2.Y2 <= Alien(x).Top + 680 Then
                     If Alien(x).Visible = True Then
-                        'Line2.Visible = False
+                        'Line2.Visible = False    Após matar o primeiro "dab" a bala continuo o curso
                         matou = matou + 1
                     End If
                     Alien(x).Visible = False
