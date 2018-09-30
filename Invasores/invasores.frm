@@ -170,7 +170,7 @@ Private Sub form_keydown(KeyCode As Integer, Shift As Integer)
             Timer1.Enabled = True
             
         ElseIf KeyCode = vbKeySpace And Line2.Visible = False Then ' Espaço atira
-            rc = sndPlaySound("C:\vb6\Invasores\midia\Sounds\deagle-1.wav", SND_ASYNC) ' aciona som de tiro
+            rc = sndPlaySound("C:\vb6-master\Invasores\midia\Sounds\deagle-1.wav", SND_ASYNC) ' aciona som de tiro
             Line2.Visible = True
             Line2.X1 = Image1.Left + 230
             Line2.X2 = Image1.Left + 230
@@ -209,10 +209,10 @@ Private Sub IniciaJogo()
         
         For i = 0 To 5 ' load 6 pictures
             Alien(i).Visible = True
-            Alien(i).Picture = LoadPicture("C:\vb6\Invasores\midia\img\dab.jpg")
+            Alien(i).Picture = LoadPicture("C:\vb6-master\Invasores\midia\img\dab.jpg")
         Next i
         
-        Image1.Picture = LoadPicture("C:\vb6\Invasores\midia\img\image2.jpg")
+        Image1.Picture = LoadPicture("C:\vb6-master\Invasores\midia\img\image2.jpg")
         Timer1.Enabled = True
         Timer2.Enabled = True
         matou = 0
@@ -234,10 +234,10 @@ Private Sub IniciaJogo()
             
             For i = 0 To 5 ' load 6 pictures
                 Alien(i).Visible = True
-                Alien(i).Picture = LoadPicture("C:\vb6\Invasores\midia\img\dab.jpg")
+                Alien(i).Picture = LoadPicture("C:\vb6-master\Invasores\midia\img\dab.jpg")
             Next i
             
-            Image1.Picture = LoadPicture("C:\vb6\Invasores\midia\img\image2.jpg")
+            Image1.Picture = LoadPicture("C:\vb6-master\Invasores\midia\img\image2.jpg")
             Timer1.Enabled = True
             Timer2.Enabled = True
             matou = 0
@@ -296,7 +296,7 @@ Private Sub Timer1_Timer()
                 'If Alien(i).Top + 480 >= 6000 And Alien(i).Top + 480 <= 6400 Then
             ' Caso queira retornar o "dab" ao inicio depois de tocar a extremidade de baixo (comentar somente o proximo if)
                     If Alien(i).Top >= 6400 Then
-                        rc = sndPlaySound("C:\vb6\Invasores\midia\Sounds\gg_brass_bell.wav", SND_ASYNC)
+                        rc = sndPlaySound("C:\vb6-master\Invasores\midia\Sounds\gg_brass_bell.wav", SND_ASYNC)
                         Image1.Picture = Image2.Picture
                         Timer1.Enabled = False
                         Timer2.Enabled = False
