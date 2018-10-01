@@ -217,3 +217,7 @@ Private Sub imgMemo_Click(Index As Integer)
     End If
     
 End Sub
+
+Private Sub iniciaJogo()
+
+End Sub
