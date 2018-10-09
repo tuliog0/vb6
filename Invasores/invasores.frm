@@ -13,6 +13,11 @@ Begin VB.Form Form1
    ScaleHeight     =   7305
    ScaleWidth      =   6240
    StartUpPosition =   2  'CenterScreen
+   Begin VB.Timer Timer3 
+      Interval        =   150
+      Left            =   4680
+      Top             =   6480
+   End
    Begin VB.Timer Timer2 
       Interval        =   30
       Left            =   2640
@@ -22,6 +27,26 @@ Begin VB.Form Form1
       Interval        =   200
       Left            =   2040
       Top             =   3600
+   End
+   Begin VB.Label lblDev 
+      Alignment       =   1  'Right Justify
+      BackStyle       =   0  'Transparent
+      Caption         =   "oncalves5_"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   13.5
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H8000000E&
+      Height          =   375
+      Left            =   4680
+      TabIndex        =   8
+      Top             =   6960
+      Width           =   1575
    End
    Begin VB.Label Label1 
       Alignment       =   2  'Center
@@ -368,6 +393,7 @@ Attribute VB_Exposed = False
 Dim lugar As Boolean
 Dim posicao As Integer
 Dim matou As Byte
+Dim xy As Long
 
 
 Private Declare Function sndPlaySound Lib "winmm.dll" Alias "sndPlaySoundA" (ByVal IpszSoundName As String, ByVal uFlags As Long) As Long
@@ -423,7 +449,7 @@ End Sub
 
 Private Sub IniciaJogo()
         
-    If MsgBox("Deseja um jogo mais Dificil?" & vbCrLf & "Yes - Dificil" & vbCrLf & "No - Fácil", vbYesNo, "Selecione o estilo.") = vbNo Then
+    If MsgBox("Deseja um jogo mais difícil?" & vbCrLf & vbCrLf & "Sim - dificil" & "    /   " & "Não - fácil", vbYesNo, "Selecione o nível de jogo.") = vbNo Then
     ' Caso o jogador selecionar não na mensagem iniciara os "dab" com mais espaço.
         Line2.Visible = False
         lblScore.Caption = 0
@@ -442,6 +468,7 @@ Private Sub IniciaJogo()
         Image1.Picture = LoadPicture("C:\vb6-master\Invasores\midia\img\image2.jpg")
         Timer1.Enabled = True
         Timer2.Enabled = True
+        Timer3.Enabled = True
         matou = 0
         Alien(0).Left = 4199
         Alien(0).Top = 0
@@ -475,6 +502,7 @@ Private Sub IniciaJogo()
             Image1.Picture = LoadPicture("C:\vb6-master\Invasores\midia\img\image2.jpg")
             Timer1.Enabled = True
             Timer2.Enabled = True
+            Timer3.Enabled = True
             matou = 0
             Alien(0).Left = 4199
             Alien(0).Top = 0
@@ -593,4 +621,18 @@ Private Sub timer2_timer()
         End If
     End If
 
+End Sub
+
+Private Sub Timer3_Timer()
+    
+    Dim dev
+    dev = Array("D", "e", "s", "e", "n", "v", "o", "l", "v", "i", "d", "o", "_", "p", "o", "r", "_", "t", "u", "l", "i", "o", "g", "o", "n", "c", "a", "l", "v", "e", "s", "5", "_")
+    
+    lblDev.Caption = lblDev.Caption + dev(xy)
+    xy = xy + 1
+    
+    If xy > 32 Then
+        xy = 0
+    End If
+    
 End Sub
