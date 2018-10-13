@@ -624,14 +624,14 @@ Private Sub timer2_timer()
 End Sub
 
 Private Sub Timer3_Timer()
-    
     Dim dev
     dev = Array("D", "e", "s", "e", "n", "v", "o", "l", "v", "i", "d", "o", "_", "p", "o", "r", "_", "t", "u", "l", "i", "o", "g", "o", "n", "c", "a", "l", "v", "e", "s", "5", "_")
     
     lblDev.Caption = lblDev.Caption + dev(xy)
     xy = xy + 1
     
-    If xy > 32 Then
+    If xy > 32 Then '32 5  31 7
+        lblDev.Caption = "oncalves5_"
         xy = 0
     End If
     
