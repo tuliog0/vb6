@@ -2,5 +2,8 @@
 ### extract to c:
 
 # How to play the games?
-<p>C:\vb6-master\Invasores\Invasores.exe</p>
-<p>C:\vb6-master\JogoDaMemoria\JogoDaMemoria.exe</p>
+C:\vb6-master\Invasores\Invasores.exe
+
+C:\vb6-master\JogoDaMemoria\JogoDaMemoria.exe
+
+[Blog do Da2k](https://blog.da2k.com.br)
