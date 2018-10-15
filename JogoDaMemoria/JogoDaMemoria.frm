@@ -12,7 +12,7 @@ Begin VB.Form Form1
    MinButton       =   0   'False
    ScaleHeight     =   3900
    ScaleWidth      =   5865
-   StartUpPosition =   3  'Windows Default
+   StartUpPosition =   2  'CenterScreen
    Begin VB.Timer Timer2 
       Enabled         =   0   'False
       Interval        =   1000
@@ -271,11 +271,13 @@ Private Sub imgMemo_Click(Index As Integer)
     End If
     
     If imgMemo(Clicou).Tag <> imgMemo(Index).Tag And Primeiro = False Then
+        MsgBox " Tente novamente!"
         imgMemo(Index).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\delphi.jpg")
         imgMemo(Clicou).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\delphi.jpg")
         imgMemo(Index).Enabled = True
         imgMemo(Clicou).Enabled = True
         Primeiro = True
+        
     ElseIf imgMemo(Clicou).Tag = imgMemo(Index).Tag And Primeiro = False Then
         Ganhou = Ganhou + 1
         lblAcertos.Caption = Ganhou
@@ -285,7 +287,7 @@ Private Sub imgMemo_Click(Index As Integer)
     End If
     
     If Ganhou = 8 Then
-        MsgBox "Você venceu"
+        MsgBox "Você venceu!"
         Timer1.Enabled = False
         iniciaJogo
     End If
@@ -301,6 +303,7 @@ Private Sub iniciaJogo()
     For I = 0 To 15
         imgMemo(I).Tag = "Vazio"
         imgMemo(I).Enabled = True
+        imgMemo(I).Visible = False
         imgMemo(I).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\delphi.jpg")
     Next
     
@@ -393,7 +396,7 @@ End Sub
 Private Sub Timer1_Timer()
     lblTempo.Caption = Val(lblTempo.Caption) + 1
     If lblTempo.Caption = "60" Then
-        MsgBox "Você perdeu"
+        MsgBox "Você perdeu!"
         iniciaJogo
     End If
 End Sub
@@ -401,6 +404,7 @@ End Sub
 Private Sub Timer2_Timer()
     For I = O To 15
         imgMemo(I).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\delphi.jpg")
+        imgMemo(I).Visible = True
     Next I
     Timer1.Enabled = True
     Timer2.Enabled = False
