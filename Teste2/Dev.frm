@@ -20,6 +20,24 @@ Begin VB.Form Dev
       Top             =   840
       Width           =   3255
    End
+   Begin VB.Label lblDev 
+      Alignment       =   1  'Right Justify
+      Caption         =   "Label1"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   18
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   375
+      Left            =   720
+      TabIndex        =   1
+      Top             =   2280
+      Width           =   3255
+   End
 End
 Attribute VB_Name = "Dev"
 Attribute VB_GlobalNameSpace = False
