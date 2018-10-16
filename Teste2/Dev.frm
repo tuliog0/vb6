@@ -45,5 +45,5 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Private Sub Command1_Click()
-    MsgBox "Hello world. Primeiro Teste."
+    MsgBox "Hello world."
 End Sub
