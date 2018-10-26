@@ -416,7 +416,8 @@ Private Sub form_keydown(KeyCode As Integer, Shift As Integer)
             Timer1.Enabled = True
             
         ElseIf KeyCode = vbKeySpace And Line2.Visible = False Then ' Espaço atira
-            rc = sndPlaySound("C:\vb6-master\Invasores\midia\Sounds\deagle-1.wav", SND_ASYNC) ' aciona som de tiro
+            'rc = sndPlaySound("C:\vb6-master\Invasores\midia\Sounds\deagle-1.wav", SND_ASYNC) ' aciona som de tiro
+            rc = sndPlaySound("\\SUPORTE03-PC\vb6-master\Invasores\midia\Sounds\deagle-1.wav", SND_ASYNC) ' aciona som de tiro
             Line2.Visible = True
             Line2.X1 = Image1.Left + 230
             Line2.X2 = Image1.Left + 230
@@ -456,16 +457,19 @@ Private Sub IniciaJogo()
         
         For i = 0 To 5 ' load 6 pictures dab
             Alien(i).Visible = True
-            Alien(i).Picture = LoadPicture("C:\vb6-master\Invasores\midia\img\dab.jpg")
+            'Alien(i).Picture = LoadPicture("C:\vb6-master\Invasores\midia\img\dab.jpg")
+            Alien(i).Picture = LoadPicture("\\SUPORTE03-PC\vb6-master\Invasores\midia\img\dab.jpg") '
         Next i
         
         For i = 0 To 5 ' load 6 pictures dead
             Label1(i).Visible = False
             alienDead(i).Visible = False
-            alienDead(i).Picture = LoadPicture("C:\vb6-master\Invasores\midia\img\emoji.jpg")
+            'alienDead(i).Picture = LoadPicture("C:\vb6-master\Invasores\midia\img\emoji.jpg")'
+            alienDead(i).Picture = LoadPicture("\\SUPORTE03-PC\vb6-master\Invasores\midia\img\emoji.jpg") '
         Next i
         
-        Image1.Picture = LoadPicture("C:\vb6-master\Invasores\midia\img\image2.jpg")
+        'Image1.Picture = LoadPicture("C:\vb6-master\Invasores\midia\img\image2.jpg")
+        Image1.Picture = LoadPicture("\\SUPORTE03-PC\vb6-master\Invasores\midia\img\image2.jpg")
         Timer1.Enabled = True
         Timer2.Enabled = True
         Timer3.Enabled = True
@@ -482,7 +486,8 @@ Private Sub IniciaJogo()
         Alien(4).Top = -2600
         Alien(5).Left = 525
         Alien(5).Top = -3400
-        rc = sndPlaySound("C:\vb6-master\Invasores\midia\Sounds\hos2.wav", SND_ASYNC)
+        'rc = sndPlaySound("C:\vb6-master\Invasores\midia\Sounds\hos2.wav", SND_ASYNC)
+        rc = sndPlaySound("\\SUPORTE03-PC\vb6-master\Invasores\midia\Sounds\hos2.wav", SND_ASYNC)
         
         Else ' Caso o jogador selecionar 'SIM' na mensagem ou qualquer outra coisa... o jogo iniciara com os "dab" mais proximos dificultando o jogo.
             Line2.Visible = False
@@ -491,15 +496,18 @@ Private Sub IniciaJogo()
             For i = 0 To 5 ' load 6 pictures dab
                 Label1(i).Visible = False
                 Alien(i).Visible = True
-                Alien(i).Picture = LoadPicture("C:\vb6-master\Invasores\midia\img\dab.jpg")
+                'Alien(i).Picture = LoadPicture("C:\vb6-master\Invasores\midia\img\dab.jpg")
+                Alien(i).Picture = LoadPicture("\\SUPORTE03-PC\vb6-master\Invasores\midia\img\dab.jpg")
             Next i
             
             For i = 0 To 5 ' load 6 pictures dead
             alienDead(i).Visible = False ' Torna os deads invisíveis
-            alienDead(i).Picture = LoadPicture("C:\vb6-master\Invasores\midia\img\emoji.jpg")
+            'alienDead(i).Picture = LoadPicture("C:\vb6-master\Invasores\midia\img\emoji.jpg")
+            alienDead(i).Picture = LoadPicture("\\SUPORTE03-PC\vb6-master\Invasores\midia\img\emoji.jpg")
             Next i
             
-            Image1.Picture = LoadPicture("C:\vb6-master\Invasores\midia\img\image2.jpg")
+            'Image1.Picture = LoadPicture("C:\vb6-master\Invasores\midia\img\image2.jpg")
+            Image1.Picture = LoadPicture("\\SUPORTE03-PC\vb6-master\Invasores\midia\img\image2.jpg")
             Timer1.Enabled = True
             Timer2.Enabled = True
             Timer3.Enabled = True
@@ -516,7 +524,8 @@ Private Sub IniciaJogo()
             Alien(4).Top = -200
             Alien(5).Left = 525
             Alien(5).Top = -250
-            rc = sndPlaySound("C:\vb6-master\Invasores\midia\Sounds\hos3.wav", SND_ASYNC)
+            'rc = sndPlaySound("C:\vb6-master\Invasores\midia\Sounds\hos3.wav", SND_ASYNC)
+            rc = sndPlaySound("\\SUPORTE03-PC\vb6-master\Invasores\midia\Sounds\hos3.wav", SND_ASYNC)
     End If
         
 End Sub
@@ -560,7 +569,8 @@ Private Sub Timer1_Timer()
                 'If Alien(i).Top + 480 >= 6000 And Alien(i).Top + 480 <= 6400 Then
             ' Caso queira retornar o "dab" ao inicio depois de tocar a extremidade de baixo (comentar somente o proximo if)
                     If Alien(i).Top >= 6400 Then
-                        rc = sndPlaySound("C:\vb6-master\Invasores\midia\Sounds\gg_brass_bell.wav", SND_ASYNC)
+                        'rc = sndPlaySound("C:\vb6-master\Invasores\midia\Sounds\gg_brass_bell.wav", SND_ASYNC)
+                        rc = sndPlaySound("\\SUPORTE03-PC\vb6-master\Invasores\midia\Sounds\gg_brass_bell.wav", SND_ASYNC)
                         Image1.Picture = Image2.Picture
                         Timer1.Enabled = False
                         Timer2.Enabled = False
@@ -595,7 +605,8 @@ Private Sub timer2_timer()
                 If Line2.Y1 >= Alien(x).Top And Line2.Y2 <= Alien(x).Top + 680 Then
                     If Alien(x).Visible = True And Line2.Visible = True Then
                         'Line2.Visible = False    Após matar o primeiro "dab" a bala não continua o curso
-                        rc = sndPlaySound("C:\vb6-master\Invasores\midia\Sounds\bhit_flesh-1.wav", SND_ASYNC)
+                        'rc = sndPlaySound("C:\vb6-master\Invasores\midia\Sounds\bhit_flesh-1.wav", SND_ASYNC)
+                        rc = sndPlaySound("\\SUPORTE03-PC\vb6-master\Invasores\midia\Sounds\bhit_flesh-1.wav", SND_ASYNC)
                         Alien(x).Visible = False ' Tira o "dab" que morreu
                         alienDead(x).Visible = True ' Mostra no controle o "dab" morto
                         matou = matou + 1 ' Contagem de acertos
@@ -609,7 +620,8 @@ Private Sub timer2_timer()
     Next x
     
     If matou = 6 Then ' Após matar os seis "dab" o jogador ganha e fim de jogo
-    rc = sndPlaySound("C:\vb6-master\Invasores\midia\Sounds\gg_brass_bell.wav", SND_ASYNC)
+    'rc = sndPlaySound("C:\vb6-master\Invasores\midia\Sounds\gg_brass_bell.wav", SND_ASYNC)
+    rc = sndPlaySound("\\SUPORTE03-PC\Invasores\midia\Sounds\gg_brass_bell.wav", SND_ASYNC)
     
         If MsgBox("Você ganhou!!!", vbOK, "Parabéns!") = vbOK Or vbCancel Then
             Timer1.Enabled = False
