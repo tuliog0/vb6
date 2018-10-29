@@ -3,6 +3,7 @@ Form=Music.frm
 Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\Windows\SysWOW64\stdole2.tlb#OLE Automation
 Object={C1A8AF28-1257-101B-8FB0-0020AF039CA3}#1.1#0; MCI32.OCX
 Startup="Music"
+ExeName32="Music.exe"
 Command32=""
 Name="Project1"
 HelpContextID="0"
