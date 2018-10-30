@@ -49,7 +49,7 @@ Begin VB.Form Form1
       Caption         =   "0"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   30
+         Size            =   29.25
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
@@ -67,7 +67,7 @@ Begin VB.Form Form1
       Caption         =   "0"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   30
+         Size            =   29.25
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
@@ -247,21 +247,29 @@ End Sub
 Private Sub imgMemo_Click(Index As Integer)
 
     If imgMemo(Index).Tag = "Word" Then
-        imgMemo(Index).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\word.jpg")
+        'imgMemo(Index).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\word.jpg")
+        imgMemo(Index).Picture = LoadPicture("\\SUPORTE03-PC\vb6-master\JogoDaMemoria\midia\img\word.jpg")
     ElseIf imgMemo(Index).Tag = "Tabela" Then
-        imgMemo(Index).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\table.jpg")
+        'imgMemo(Index).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\table.jpg")
+        imgMemo(Index).Picture = LoadPicture("\\SUPORTE03-PC\vb6-master\JogoDaMemoria\midia\img\table.jpg")
     ElseIf imgMemo(Index).Tag = "Cd" Then
-        imgMemo(Index).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\cdrom01.jpg")
+        'imgMemo(Index).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\cdrom01.jpg")
+        imgMemo(Index).Picture = LoadPicture("\\SUPORTE03-PC\vb6-master\JogoDaMemoria\midia\img\cdrom01.jpg")
     ElseIf imgMemo(Index).Tag = "Copa" Then
-        imgMemo(Index).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\copas.jpg")
+        'imgMemo(Index).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\copas.jpg")
+        imgMemo(Index).Picture = LoadPicture("\\SUPORTE03-PC\vb6-master\JogoDaMemoria\midia\img\copas.jpg")
     ElseIf imgMemo(Index).Tag = "Paus" Then
-        imgMemo(Index).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\paus.jpg")
+        'imgMemo(Index).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\paus.jpg")
+        imgMemo(Index).Picture = LoadPicture("\\SUPORTE03-PC\vb6-master\JogoDaMemoria\midia\img\paus.jpg")
     ElseIf imgMemo(Index).Tag = "Ouro" Then
-        imgMemo(Index).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\ouro.jpg")
+        'imgMemo(Index).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\ouro.jpg")
+        imgMemo(Index).Picture = LoadPicture("\\SUPORTE03-PC\vb6-master\JogoDaMemoria\midia\img\ouro.jpg")
     ElseIf imgMemo(Index).Tag = "Preto" Then
-        imgMemo(Index).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\preto.jpg")
+        'imgMemo(Index).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\preto.jpg")
+        imgMemo(Index).Picture = LoadPicture("\\SUPORTE03-PC\vb6-master\JogoDaMemoria\midia\img\preto.jpg")
     ElseIf imgMemo(Index).Tag = "Abrir" Then
-        imgMemo(Index).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\folder.jpg")
+        'imgMemo(Index).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\folder.jpg")
+        imgMemo(Index).Picture = LoadPicture("\\SUPORTE03-PC\vb6-master\JogoDaMemoria\midia\img\folder.jpg")
     End If
     
     imgMemo(Index).Enabled = False
@@ -272,8 +280,10 @@ Private Sub imgMemo_Click(Index As Integer)
     
     If imgMemo(Clicou).Tag <> imgMemo(Index).Tag And Primeiro = False Then
         MsgBox " Tente novamente!"
-        imgMemo(Index).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\delphi.jpg")
-        imgMemo(Clicou).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\delphi.jpg")
+        'imgMemo(Index).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\delphi.jpg")
+        'imgMemo(Clicou).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\delphi.jpg")
+        imgMemo(Index).Picture = LoadPicture("\\SUPORTE03-PC\vb6-master\JogoDaMemoria\midia\img\delphi.jpg")
+        imgMemo(Clicou).Picture = LoadPicture("\\SUPORTE03-PC\vb6-master\JogoDaMemoria\midia\img\delphi.jpg")
         imgMemo(Index).Enabled = True
         imgMemo(Clicou).Enabled = True
         Primeiro = True
@@ -304,7 +314,8 @@ Private Sub iniciaJogo()
         imgMemo(I).Tag = "Vazio"
         imgMemo(I).Enabled = True
         imgMemo(I).Visible = False
-        imgMemo(I).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\delphi.jpg")
+        'imgMemo(I).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\delphi.jpg")
+        imgMemo(I).Picture = LoadPicture("\\SUPORTE03-PC\vb6-master\JogoDaMemoria\midia\img\delphi.jpg")
     Next
     
     I = 0
@@ -312,7 +323,8 @@ Private Sub iniciaJogo()
         posicao = Int(Rnd * NumPecas)
         If imgMemo(posicao).Tag = "Vazio" Then
             imgMemo(posicao).Tag = "Word"
-            imgMemo(posicao).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\word.jpg")
+            'imgMemo(posicao).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\word.jpg")
+            imgMemo(posicao).Picture = LoadPicture("\\SUPORTE03-PC\vb6-master\JogoDaMemoria\midia\img\word.jpg")
             I = I + 1
         End If
     Loop
@@ -322,7 +334,8 @@ Private Sub iniciaJogo()
         posicao = Int(Rnd * NumPecas)
         If imgMemo(posicao).Tag = "Vazio" Then
             imgMemo(posicao).Tag = "Tabela"
-            imgMemo(posicao).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\table.jpg")
+            'imgMemo(posicao).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\table.jpg")
+            imgMemo(posicao).Picture = LoadPicture("\\SUPORTE03-PC\vb6-master\JogoDaMemoria\midia\img\table.jpg")
             I = I + 1
         End If
     Loop
@@ -332,7 +345,8 @@ Private Sub iniciaJogo()
         posicao = Int(Rnd * NumPecas)
         If imgMemo(posicao).Tag = "Vazio" Then
             imgMemo(posicao).Tag = "Cd"
-            imgMemo(posicao).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\cdrom01.jpg")
+            'imgMemo(posicao).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\cdrom01.jpg")
+            imgMemo(posicao).Picture = LoadPicture("\\SUPORTE03-PC\vb6-master\JogoDaMemoria\midia\img\cdrom01.jpg")
             I = I + 1
         End If
     Loop
@@ -342,7 +356,8 @@ Private Sub iniciaJogo()
         posicao = Int(Rnd * NumPecas)
         If imgMemo(posicao).Tag = "Vazio" Then
             imgMemo(posicao).Tag = "Copa"
-            imgMemo(posicao).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\copas.jpg")
+            'imgMemo(posicao).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\copas.jpg")
+            imgMemo(posicao).Picture = LoadPicture("\\SUPORTE03-PC\vb6-master\JogoDaMemoria\midia\img\copas.jpg")
             I = I + 1
         End If
     Loop
@@ -352,7 +367,8 @@ Private Sub iniciaJogo()
         posicao = Int(Rnd * NumPecas)
         If imgMemo(posicao).Tag = "Vazio" Then
             imgMemo(posicao).Tag = "Paus"
-            imgMemo(posicao).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\paus.jpg")
+            'imgMemo(posicao).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\paus.jpg")
+            imgMemo(posicao).Picture = LoadPicture("\\SUPORTE03-PC\vb6-master\JogoDaMemoria\midia\img\paus.jpg")
             I = I + 1
         End If
     Loop
@@ -362,7 +378,8 @@ Private Sub iniciaJogo()
         posicao = Int(Rnd * NumPecas)
         If imgMemo(posicao).Tag = "Vazio" Then
             imgMemo(posicao).Tag = "Ouro"
-            imgMemo(posicao).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\ouro.jpg")
+            'imgMemo(posicao).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\ouro.jpg")
+            imgMemo(posicao).Picture = LoadPicture("\\SUPORTE03-PC\vb6-master\JogoDaMemoria\midia\img\ouro.jpg")
             I = I + 1
         End If
     Loop
@@ -372,7 +389,8 @@ Private Sub iniciaJogo()
         posicao = Int(Rnd * NumPecas)
         If imgMemo(posicao).Tag = "Vazio" Then
             imgMemo(posicao).Tag = "Preto"
-            imgMemo(posicao).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\preto.jpg")
+            'imgMemo(posicao).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\preto.jpg")
+            imgMemo(posicao).Picture = LoadPicture("\\SUPORTE03-PC\vb6-master\JogoDaMemoria\midia\img\preto.jpg")
             I = I + 1
         End If
     Loop
@@ -382,7 +400,8 @@ Private Sub iniciaJogo()
         posicao = Int(Rnd * NumPecas)
         If imgMemo(posicao).Tag = "Vazio" Then
             imgMemo(posicao).Tag = "Abrir"
-            imgMemo(posicao).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\folder.jpg")
+            'imgMemo(posicao).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\folder.jpg")
+            imgMemo(posicao).Picture = LoadPicture("\\SUPORTE03-PC\vb6-master\JogoDaMemoria\midia\img\folder.jpg")
             I = I + 1
         End If
     Loop
@@ -403,7 +422,8 @@ End Sub
 
 Private Sub Timer2_Timer()
     For I = O To 15
-        imgMemo(I).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\delphi.jpg")
+        'imgMemo(I).Picture = LoadPicture("C:\vb6-master\JogoDaMemoria\midia\img\delphi.jpg")
+        imgMemo(I).Picture = LoadPicture("\\SUPORTE03-PC\vb6-master\JogoDaMemoria\midia\img\delphi.jpg")
         imgMemo(I).Visible = True
     Next I
     Timer1.Enabled = True
