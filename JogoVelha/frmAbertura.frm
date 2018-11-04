@@ -141,3 +141,29 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+Private Sub btnEntrar_Click()
+    Primeiro = txtPrimeiro.Text
+    Segundo = txtSegundo.Text
+    Unload Me
+    frmJogo.Show
+End Sub
+
+Private Sub btnSair_Click()
+    End
+End Sub
+
+Private Sub txtPrimeiro_Change()
+    If txtPrimeiro <> "" And txtSegundo <> "" Then
+        btnEntrar.Enabled = True
+    Else
+        btnEntrar.enable = False
+    End If
+End Sub
+
+Private Sub txtSegundo_Change()
+    If txtSegundo.txt <> "" And txtPrimeiro <> "" Then
+        btnEntrar.Enabled = True
+    Else
+        btnEntrar.Enabled = False
+    End If
+End Sub
