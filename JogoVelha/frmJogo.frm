@@ -336,3 +336,36 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+Public verifica As Boolean
+Public cont, X, y As Byte
+Public ganhador, ganhador1 As String
+
+Private Sub btnIniciar_Click()
+    AtivaBotoes
+    LimpaMesa
+    cont = 0
+End Sub
+
+Private Sub Form_Load()
+    lblPrimeiro.Caption = Primeiro
+    lblSegundo.Caption = Segundo
+    verifica = True
+    cont = 0
+    DesativaBotoes
+End Sub
+
+Private Sub Mesa0_Click()
+    If verifica = True Then
+        Mesa0.Caption = "X"
+        verifica = False
+        Mesa0.Enabled = False
+        X = X + 1
+    Else
+        Mesa0.Caption = "O"
+        verifica = True
+        Mesa0.Enabled = False
+        y = y + 1
+    End If
+    cont = cont + 1
+    VerificaGanhador
+End Sub
