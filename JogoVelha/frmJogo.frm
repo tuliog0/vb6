@@ -16,7 +16,7 @@ Begin VB.Form frmJogo
    Begin VB.CommandButton Mesa8 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   30
+         Size            =   29.25
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
@@ -32,7 +32,7 @@ Begin VB.Form frmJogo
    Begin VB.CommandButton Mesa7 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   30
+         Size            =   29.25
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
@@ -48,7 +48,7 @@ Begin VB.Form frmJogo
    Begin VB.CommandButton Mesa6 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   30
+         Size            =   29.25
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -64,7 +64,7 @@ Begin VB.Form frmJogo
    Begin VB.CommandButton Mesa3 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   30
+         Size            =   29.25
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
@@ -80,7 +80,7 @@ Begin VB.Form frmJogo
    Begin VB.CommandButton Mesa5 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   30
+         Size            =   29.25
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
@@ -96,7 +96,7 @@ Begin VB.Form frmJogo
    Begin VB.CommandButton Mesa4 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   30
+         Size            =   29.25
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
@@ -112,7 +112,7 @@ Begin VB.Form frmJogo
    Begin VB.CommandButton Mesa2 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   30
+         Size            =   29.25
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
@@ -128,7 +128,7 @@ Begin VB.Form frmJogo
    Begin VB.CommandButton Mesa1 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   30
+         Size            =   29.25
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
@@ -144,7 +144,7 @@ Begin VB.Form frmJogo
    Begin VB.CommandButton Mesa0 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
-         Size            =   30
+         Size            =   29.25
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
@@ -364,6 +364,22 @@ Private Sub Mesa0_Click()
         Mesa0.Caption = "O"
         verifica = True
         Mesa0.Enabled = False
+        y = y + 1
+    End If
+    cont = cont + 1
+    VerificaGanhador
+End Sub
+
+Private Sub Mesa1_Click()
+        If verifica = True Then
+        Mesa1.Caption = "X"
+        verifica = False
+        Mesa1.Enabled = False
+        X = X + 1
+    Else
+        Mesa1.Caption = "O"
+        verifica = True
+        Mesa1.Enabled = False
         y = y + 1
     End If
     cont = cont + 1
