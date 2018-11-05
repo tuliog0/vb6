@@ -347,8 +347,8 @@ Private Sub btnIniciar_Click()
 End Sub
 
 Private Sub Form_Load()
-    lblPrimeiro.Caption = Primeiro
-    lblSegundo.Caption = Segundo
+    lblPrimeiro.Caption = primeiro
+    lblSegundo.Caption = segundo
     verifica = True
     cont = 0
     DesativaBotoes
@@ -367,7 +367,7 @@ Private Sub Mesa0_Click()
         y = y + 1
     End If
     cont = cont + 1
-    VerificaGanhador
+    verificaGanhador
 End Sub
 
 Private Sub Mesa1_Click()
@@ -383,5 +383,228 @@ Private Sub Mesa1_Click()
         y = y + 1
     End If
     cont = cont + 1
-    VerificaGanhador
+    verificaGanhador
+End Sub
+
+Private Sub Mesa2_Click()
+    If verifica = True Then
+        Mesa2.Caption = "X"
+        verifica = False
+        Mesa2.Enabled = False
+        X = X + 1
+    Else
+        Mesa2.Caption = "O"
+        verifica = True
+        Mesa2.Enabled = False
+        y = y + 1
+    End If
+    cont = cont + 1
+    verificaGanhador
+End Sub
+
+Private Sub Mesa3_Click()
+    If verifica = True Then
+        Mesa3.Caption = "X"
+        verifica = False
+        Mesa3.Enabled = False
+        X = X + 1
+    Else
+        Mesa3.Caption = "O"
+        verifica = True
+        Mesa3.Enabled = False
+        y = y + 1
+    End If
+    cont = cont + 1
+    verificaGanhador
+End Sub
+
+Private Sub Mesa4_Click()
+    If verifica = True Then
+        Mesa4.Caption = "X"
+        verifica = False
+        Mesa4.Enabled = False
+        X = X + 1
+    Else
+        Mesa4.Caption = "O"
+        verifica = True
+        Mesa4.Enabled = False
+        y = y + 1
+    End If
+    cont = cont + 1
+    verificaGanhador
+End Sub
+
+Private Sub Mesa5_Click()
+    If verifica = True Then
+        Mesa5.Caption = "X"
+        verifica = False
+        Mesa5.Enabled = False
+        X = X + 1
+    Else
+        Mesa5.Caption = "O"
+        verifica = True
+        Mesa5.Enabled = False
+        y = y + 1
+    End If
+    cont = cont + 1
+    verificaGanhador
+End Sub
+
+Private Sub Mesa6_Click()
+    If verifica = True Then
+        Mesa6.Caption = "X"
+        verifica = False
+        Mesa6.Enabled = False
+        X = X + 1
+    Else
+        Mesa6.Caption = "O"
+        verifica = True
+        Mesa6.Enabled = False
+        y = y + 1
+    End If
+    cont = cont + 1
+    verificaGanhador
+End Sub
+
+Private Sub Mesa7_Click()
+    If verifica = True Then
+        Mesa7.Caption = "X"
+        verifica = False
+        Mesa7.Enabled = False
+        X = X + 1
+    Else
+        Mesa7.Caption = "O"
+        verifica = True
+        Mesa7.Enabled = False
+        y = y + 1
+    End If
+    cont = cont + 1
+    verificaGanhador
+End Sub
+
+Private Sub Mesa8_Click()
+    If verifica = True Then
+        Mesa8.Caption = "X"
+        verifica = False
+        Mesa8.Enabled = False
+        X = X + 1
+    Else
+        Mesa8.Caption = "O"
+        verifica = True
+        Mesa8.Enabled = False
+        y = y + 1
+    End If
+    cont = cont + 1
+    verificaGanhador
+End Sub
+
+Private Sub verificaGanhador()
+    If (Mesa0.capition = "X" And Mesa1.capiton = "X" And Mesa2.Caption = "X") Or (Mesa0.capition = "O" And Mesa1.Caption = "O" And Mesa2.Caption = "O") Then
+        QuemGanhou
+        MsgBox "O ganhador foi: " & ganhador
+        DesativaBotoes
+        SomaPonto
+        Exit Sub
+    ElseIf (Mesa3.capition = "X" And Mesa4.capition = "X" And Mesa5.capition = "X") Or (Mesa3.capition = "O" And Mesa4.capition = "O" And Mesa5.capition = "O") Then
+        QuemGanhou
+        MsgBox "O ganhador foi: " & ganhador
+        DesativaBotoes
+        SomaPonto
+        Exit Sub
+    ElseIf (Mesa6.capition = "X" And Mesa7.capition = "X" And Mesa8.capition = "X") Or (Mesa6.capition = "O" And Mesa7.capition = "O" And Mesa8.capition = "O") Then
+        QuemGanhou
+        MsgBox "O ganhador foi: " & ganhador
+        DesativaBotoes
+        SomaPonto
+        Exit Sub
+    ElseIf (Mesa0.capition = "X" And Mesa3.capition = "X" And Mesa6.capition = "X") Or (Mesa0.capition = "O" And Mesa3.capition = "O" And Mesa6.capition = "O") Then
+        QuemGanhou
+        MsgBox "O ganhador foi: " & ganhador
+        DesativaBotoes
+        SomaPonto
+        Exit Sub
+    ElseIf (Mesa1.capition = "X" And Mesa4.capition = "X" And Mesa7.capition = "X") Or (Mesa1.capition = "O" And Mesa4.capition = "O" And Mesa7.capition = "O") Then
+        QuemGanhou
+        MsgBox "O ganhador foi: " & ganhador
+        DesativaBotoes
+        SomaPonto
+        Exit Sub
+    ElseIf (Mesa2.capition = "X" And Mesa5.capition = "X" And Mesa8.capition = "X") Or (Mesa2.capition = "O" And Mesa5.capition = "O" And Mesa8.capition = "O") Then
+        QuemGanhou
+        MsgBox "O ganhador foi: " & ganhador
+        DesativaBotoes
+        SomaPonto
+        Exit Sub
+    ElseIf (Mesa0.capition = "X" And Mesa4.capition = "X" And Mesa8.capition = "X") Or (Mesa0.capition = "O" And Mesa4.capition = "O" And Mesa8.capition = "O") Then
+        QuemGanhou
+        MsgBox "O ganhador foi: " & ganhador
+        DesativaBotoes
+        SomaPonto
+        Exit Sub
+    ElseIf (Mesa2.capition = "X" And Mesa4.capition = "X" And Mesa6.capition = "X") Or (Mesa2.capition = "O" And Mesa4.capition = "O" And Mesa6.capition = "O") Then
+        QuemGanhou
+        MsgBox "O ganhador foi: " & ganhador
+        DesativaBotoes
+        SomaPonto
+        Exit Sub
+    End If
+    If cont = 9 Then
+        MsgBox "Não houve ganhador", vbInformation, "Jogo da Velha"
+        ganhador1 = "O"
+        verifica = False
+    End If
+End Sub
+
+Private Sub DesativaBotoes()
+    Mesa0.Enabled = False
+    Mesa1.Enabled = False
+    Mesa2.Enabled = False
+    Mesa3.Enabled = False
+    Mesa4.Enabled = False
+    Mesa5.Enabled = False
+    Mesa6.Enabled = False
+    Mesa7.Enabled = False
+    Mesa8.Enabled = False
+End Sub
+
+Private Sub AtivaBotoes()
+    Mesa0.Enabled = True
+    Mesa1.Enabled = True
+    Mesa2.Enabled = True
+    Mesa3.Enabled = True
+    Mesa4.Enabled = True
+    Mesa5.Enabled = True
+    Mesa6.Enabled = True
+    Mesa7.Enabled = True
+    Mesa8.Enabled = True
+End Sub
+
+Private Sub LimpaMesa()
+    Mesa0.Caption = ""
+    Mesa1.Caption = ""
+    Mesa2.Caption = ""
+    Mesa3.Caption = ""
+    Mesa4.Caption = ""
+    Mesa5.Caption = ""
+    Mesa6.Caption = ""
+    Mesa7.Caption = ""
+    Mesa8.Caption = ""
+End Sub
+
+Private Sub QuemGanhou()
+    If X > y Then
+        ganhador = primeiro
+        ganhador1 = segundo
+    Else
+        ganhador = segundo
+        ganhador1 = primeiro
+    End If
+End Sub
+
+Private Sub SomaPonto()
+    If X > y Then
+        lblPlacarPrimeiro.Caption = Val(lblPlacarPrimeiro.Caption) + 1
+    Else
+        lblPlacarSegundo.Caption = Val(lblPlacarSegundo.Caption) + 1
+    End If
 End Sub
