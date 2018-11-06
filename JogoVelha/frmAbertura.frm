@@ -142,8 +142,8 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Private Sub btnEntrar_Click()
-    Primeiro = txtPrimeiro.Text
-    Segundo = txtSegundo.Text
+    primeiro = txtPrimeiro.Text
+    segundo = txtSegundo.Text
     Unload Me
     frmJogo.Show
 End Sub
@@ -153,15 +153,15 @@ Private Sub btnSair_Click()
 End Sub
 
 Private Sub txtPrimeiro_Change()
-    If txtPrimeiro <> "" And txtSegundo <> "" Then
+    If txtPrimeiro.Text <> "" And txtSegundo.Text <> "" Then
         btnEntrar.Enabled = True
     Else
-        btnEntrar.enable = False
+        btnEntrar.Enabled = False
     End If
 End Sub
 
 Private Sub txtSegundo_Change()
-    If txtSegundo.txt <> "" And txtPrimeiro <> "" Then
+    If txtSegundo.Text <> "" And txtPrimeiro.Text <> "" Then
         btnEntrar.Enabled = True
     Else
         btnEntrar.Enabled = False
