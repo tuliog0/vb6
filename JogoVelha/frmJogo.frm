@@ -499,49 +499,49 @@ Private Sub Mesa8_Click()
 End Sub
 
 Private Sub verificaGanhador()
-    If (Mesa0.capition = "X" And Mesa1.capiton = "X" And Mesa2.Caption = "X") Or (Mesa0.capition = "O" And Mesa1.Caption = "O" And Mesa2.Caption = "O") Then
+    If (Mesa0.Caption = "X" And Mesa1.Caption = "X" And Mesa2.Caption = "X") Or (Mesa0.Caption = "O" And Mesa1.Caption = "O" And Mesa2.Caption = "O") Then
         QuemGanhou
         MsgBox "O ganhador foi: " & ganhador
         DesativaBotoes
         SomaPonto
         Exit Sub
-    ElseIf (Mesa3.capition = "X" And Mesa4.capition = "X" And Mesa5.capition = "X") Or (Mesa3.capition = "O" And Mesa4.capition = "O" And Mesa5.capition = "O") Then
+    ElseIf (Mesa3.Caption = "X" And Mesa4.Caption = "X" And Mesa5.Caption = "X") Or (Mesa3.Caption = "O" And Mesa4.Caption = "O" And Mesa5.Caption = "O") Then
         QuemGanhou
         MsgBox "O ganhador foi: " & ganhador
         DesativaBotoes
         SomaPonto
         Exit Sub
-    ElseIf (Mesa6.capition = "X" And Mesa7.capition = "X" And Mesa8.capition = "X") Or (Mesa6.capition = "O" And Mesa7.capition = "O" And Mesa8.capition = "O") Then
+    ElseIf (Mesa6.Caption = "X" And Mesa7.Caption = "X" And Mesa8.Caption = "X") Or (Mesa6.Caption = "O" And Mesa7.Caption = "O" And Mesa8.Caption = "O") Then
         QuemGanhou
         MsgBox "O ganhador foi: " & ganhador
         DesativaBotoes
         SomaPonto
         Exit Sub
-    ElseIf (Mesa0.capition = "X" And Mesa3.capition = "X" And Mesa6.capition = "X") Or (Mesa0.capition = "O" And Mesa3.capition = "O" And Mesa6.capition = "O") Then
+    ElseIf (Mesa0.Caption = "X" And Mesa3.Caption = "X" And Mesa6.Caption = "X") Or (Mesa0.Caption = "O" And Mesa3.Caption = "O" And Mesa6.Caption = "O") Then
         QuemGanhou
         MsgBox "O ganhador foi: " & ganhador
         DesativaBotoes
         SomaPonto
         Exit Sub
-    ElseIf (Mesa1.capition = "X" And Mesa4.capition = "X" And Mesa7.capition = "X") Or (Mesa1.capition = "O" And Mesa4.capition = "O" And Mesa7.capition = "O") Then
+    ElseIf (Mesa1.Caption = "X" And Mesa4.Caption = "X" And Mesa7.Caption = "X") Or (Mesa1.Caption = "O" And Mesa4.Caption = "O" And Mesa7.Caption = "O") Then
         QuemGanhou
         MsgBox "O ganhador foi: " & ganhador
         DesativaBotoes
         SomaPonto
         Exit Sub
-    ElseIf (Mesa2.capition = "X" And Mesa5.capition = "X" And Mesa8.capition = "X") Or (Mesa2.capition = "O" And Mesa5.capition = "O" And Mesa8.capition = "O") Then
+    ElseIf (Mesa2.Caption = "X" And Mesa5.Caption = "X" And Mesa8.Caption = "X") Or (Mesa2.Caption = "O" And Mesa5.Caption = "O" And Mesa8.Caption = "O") Then
         QuemGanhou
         MsgBox "O ganhador foi: " & ganhador
         DesativaBotoes
         SomaPonto
         Exit Sub
-    ElseIf (Mesa0.capition = "X" And Mesa4.capition = "X" And Mesa8.capition = "X") Or (Mesa0.capition = "O" And Mesa4.capition = "O" And Mesa8.capition = "O") Then
+    ElseIf (Mesa0.Caption = "X" And Mesa4.Caption = "X" And Mesa8.Caption = "X") Or (Mesa0.Caption = "O" And Mesa4.Caption = "O" And Mesa8.Caption = "O") Then
         QuemGanhou
         MsgBox "O ganhador foi: " & ganhador
         DesativaBotoes
         SomaPonto
         Exit Sub
-    ElseIf (Mesa2.capition = "X" And Mesa4.capition = "X" And Mesa6.capition = "X") Or (Mesa2.capition = "O" And Mesa4.capition = "O" And Mesa6.capition = "O") Then
+    ElseIf (Mesa2.Caption = "X" And Mesa4.Caption = "X" And Mesa6.Caption = "X") Or (Mesa2.Caption = "O" And Mesa4.Caption = "O" And Mesa6.Caption = "O") Then
         QuemGanhou
         MsgBox "O ganhador foi: " & ganhador
         DesativaBotoes
